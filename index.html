@@ -1,0 +1,53 @@
+<!-- start every html file with this(formatting stuff) -->
+<!DOCTYPE html> 
+<!-- states the main language being used in the doc -->
+<html lang="en"> 
+<head>
+    <!-- necessary formatting stuff  -->
+    <meta charset="UTF-8">
+    <!-- tells the webrowser to automatically adjust tthe size of the page to the devices screen size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title of the webpage -->
+    <title>Janiyah's Abode</title>
+    <!-- links our html page directly to our css file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <img id="main-title" src="Title.png" alt="Welcome Home, Honey!">
+
+
+    <div id="tin-wrapper">
+
+        <img id="instruction-text" src="Click Me!.png" alt="Click Me!">
+
+        <div id="closed-tin-box">
+            
+            <img id="closed-tin" src="closed-tin-can.png" alt="Closed Tin Box">
+        </div>
+        <!-- property "display;none" prevents us from seeing the open tin when it first loads -->
+        <div id="open-tin-content" style="display:none;">
+            <img id="open-tin-base" src="open-tin-can.png" alt="Open Tin Base">
+            
+            <img id="trinket-earbuds" class="stationary-item" src="earbuds-trinket.png">
+            <img id="trinket-vaseline" class="stationary-item" src="vaseline-trinket.png">
+            <img id="trinket-kuromi" class="stationary-item" src="kuromi-sticker.png">
+
+        </div>
+
+        <div id="table-decorations">
+            <img id="trinket-keys" class="draggable-trinket" src="keys-trinket.png">
+            <img id="trinket-elf" class="draggable-trinket" src="elf-trinket.png">
+            <img id="trinket-matcha" class="draggable-trinket" src="matcha-trinket.png">
+            <img id="trinket-plant" class="draggable-trinket" src="plant-trinket.png">
+            <img id="trinket-nyx" class="draggable-trinket" src="nyx-trinket.png">
+            <img id="trinket-mascara" class="draggable-trinket" src="mascara-trinket.png">
+            
+        </div>
+    </div>
+    <audio id="click-sound" src="mouseClick.mp3"></audio>
+    <!-- we out this at the end of teh body to make sure eveyrthing is read before we do anything interactive in the webpage -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
