@@ -1,0 +1,131 @@
+/*  -------------------------------------------------
+    -------------------------------------------------
+        1. GLOBAL STYLES (ENTIRE PAGE)
+    -------------------------------------------------
+    ------------------------------------------------- */
+
+
+body{
+    background-image: url("background.jpeg"); /* sets background*/
+    background-size: cover;
+    background-position: center;
+
+    display: flex; /* enables flexbox layout */
+
+    flex-direction: column; /* stacks children vertically */
+
+    align-items: center; /* centers children horizontally */
+
+    justify-content: center; /* centers children vertically */
+
+    min-height: 100vh; /* ensures body takes full viewport height */
+
+    margin: 0; /* removes default margin */
+
+}
+#instruction-text{
+    width: 400px; 
+    height: auto;
+    margin-bottom: 0px;
+    margin-left: -215px;
+    transform: rotate(18deg);
+}
+
+/* style for main title*/
+#main-title {
+    width: 900px; 
+    height: auto;
+    margin-bottom: -20px;
+    /*margin-bottom: 20px; /* adds space below the title */
+
+}
+
+/* --------------------------------------------------
+    --------------------------------------------------
+        2. TIN CONTAINER STYLES
+    --------------------------------------------------
+    -------------------------------------------------- */
+
+    #tin-wrapper {
+        /* 'relative' means the wrapper acts as an anchor. Anything inside it 
+        with 'absolute' will be positioned relative to this wrapper. */
+        position: relative;
+
+        width: 600px; /* adjusts the size of your tin image*/
+
+        height: 500px; /*adjusts the size of your tin image*/
+
+        margin-left: -200px;
+        margin-bottom: 50px;
+        transform: rotate(-13deg);
+
+        /*display: flex; /* enables flexbox layout */
+
+        /*justify-content: center; /* centers children horizontally */
+
+        /*align-items: center; /* centers children vertically */
+
+
+    }
+    /* =================================================
+            VISUAL POP EFFECT
+       ================================================= */
+
+       /* THIS WILL TARGET EVERY IMAGE INSIDE OUR WRAPPER*/
+       
+    #tin-wrapper img{
+       /* allows fo rsmooth transition in the browser*/
+       transition: transform 0.2s ease, filter 0.2s ease;
+    }
+
+        /* This will tell the browser exactly what to do when the mouse hovers*/
+    #tin-wrapper img:hover{
+            /*we're gonna increase the image size making it pop*/
+            transform: scale(1.15); /* increases by 15%*/
+            /* adds a subtle shadow for depth*/
+            filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.4));
+            cursor:pointer;
+    }
+
+        /* ============================================
+                 POSITIONING OUR PIECES
+           ============================================*/
+
+           /*CLOSED & OPEN BOX structures stack on top of eachother*/
+    #closed-tin-box, #open-tin-content{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+    }
+    #closed-tin, #open-tin-base {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+    }
+            /* all loose items use absolute coordinates to sit where they belong*/
+    .stationary-item, .draggable-trinket{
+                position: absolute;
+                width: 225px;
+                height: auto;
+    }
+    
+
+            /* INSIDE TIN PLACEMENTS(STATIONARY)*/
+    #trinket-earbuds { top: 50%; left: 35%; width: 110px }
+    #trinket-vaseline { top: 60%; left: 55%; }
+    #trinket-kuromi { top: 35%; left: 45%; width: 70px}
+
+            /* OUTSIDE TABLE PLACEMNETS*/
+    #trinket-keys { top: 60%; left: -5%; width: 150px; transform: rotate(-30deg); }
+    #trinket-elf { top: 27%; left: -50%; width: 400px; transform: rotate(30deg); }
+    #trinket-matcha { top: 25%; right: -85%; width: 400px}
+    #trinket-plant { top: -15%; right: -30%; width: 270px; }
+    #trinket-nyx { top: 55%; right: -15%; transform: rotate(-25deg);}
+    #trinket-mascara { top: 65%; right: -40%; transform: rotate(15deg); }
+    
+
+
+
+    
